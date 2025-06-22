@@ -57,7 +57,7 @@ service:
   # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
   type: ClusterIP
   # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
-  port: 8000
+  port: 4000
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
@@ -114,14 +114,15 @@ autoscaling:
 
 # Additional volumes on the output Deployment definition.
 volumes:
-  - name: config
+  - name: elog-config
     configMap:
       name: elog-config
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
-  - name: config
-    mountPath: /config
+  - name: elog-config
+    mountPath: /config.yaml
+    subPath: config.yaml
     readOnly: true
 
 nodeSelector: {}
