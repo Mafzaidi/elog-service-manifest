@@ -114,7 +114,7 @@ autoscaling:
 
 # Additional volumes on the output Deployment definition.
 volumes:
-  - name: elog-configz
+  - name: elog-config
     configMap:
       name: elog-config
 
