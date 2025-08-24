@@ -7,6 +7,9 @@ server:
   port: 4000
 
 db:
-  host: localhost
+  host: mongodb.mongodb.svc.cluster.local
   port: 27017
+  username: admin
+  password: qpXbD2zrdP
+  name: elogdb
   
