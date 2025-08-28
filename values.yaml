@@ -123,6 +123,6 @@ tolerations: []
 
 affinity: {}
 
-env:
-  - name: MONGO_URI
-    value: mongodb://mongodb.elog-service.svc.cluster.local:27017
+envFrom:
+  - secretRef:
+      name: mongodb-secret
