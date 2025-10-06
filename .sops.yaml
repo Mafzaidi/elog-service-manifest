@@ -1,0 +1,5 @@
+keys:
+  - &age age1gcurnsp50urvq8w6jwe3cyp8zuuxqcfk674eee6ycum8z6mheswsr2qp52
+creation_rules:
+  - path_regex: \.enc\.yaml$
+    age: *age
